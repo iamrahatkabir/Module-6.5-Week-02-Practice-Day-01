@@ -77,28 +77,7 @@ int main()
     }
     // cout << e << g<< y<< p<< t << endl;
 
-    if(e < egypt)
-    {
-        egypt = e;
-    }
-    if(g<egypt)
-    {
-        egypt = g;
-    }
-    if(y < egypt)
-    {
-        egypt = y;
-    }
-    if (p < egypt)
-    {
-        egypt = p;
-    }
-    if(t < egypt)
-    {
-        egypt = t;
-    }
-
-    // cout << e << g<< y<< p<< t << endl;
+    int egypt = min({e, g, y, p, t});
     cout << egypt << endl;
 
 
