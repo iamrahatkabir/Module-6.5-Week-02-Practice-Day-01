@@ -36,9 +36,55 @@ int main()
 
         string s;
         cin >> s;
-        cout << s;
+        
+        char freq[51] = {'0'};
+        // freq[n] = {'0'};
+        
+        
+        for(int j = 0; j<n; j++)
+        {
+            bool is_exist = false;
+            if(j == 0)
+            {
+                freq[j] = s[j];
+            }
+            else{
+                for(int k = 0; k < j; k++)
+                {
+                    if(freq[k] == s[j])
+                    {
+                        is_exist = true;
+                        break;
+                    }
+                }
+                if(is_exist == false)
+                {
+                    freq[j] = s[j];
+                }
+            }
+        }
 
+        int balloons = 0;
 
+        for(int j = 0; j<n; j++)
+        {
+            if(s[j] != '\0')
+            {
+                balloons++;
+            }
+        }
+        // cout << balloons << endl;
+
+        for(int j = 0; j<n; j++)
+        {
+            if(freq[j] != '\0')
+            {
+                balloons++;
+            }
+            // cout << freq[j];
+        }
+        cout << balloons << endl;
+        // cout << endl;
         
 
 
